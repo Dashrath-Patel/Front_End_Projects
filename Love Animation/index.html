@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Love Story for You 💕</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;500;600&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Floating background elements -->
+    <div class="floating-hearts">
+        <div class="floating-heart heart-1">💕</div>
+        <div class="floating-heart heart-2">💖</div>
+        <div class="floating-heart heart-3">✨</div>
+        <div class="floating-heart heart-4">💗</div>
+        <div class="floating-heart heart-5">💓</div>
+        <div class="floating-heart heart-6">🌸</div>
+    </div>
+
+    <!-- Music Control -->
+    <div class="music-control">
+        <button id="musicToggle" class="music-btn">
+            <span class="music-icon">🎵</span>
+            <span class="music-text">Play Music</span>
+        </button>
+    </div>
+
+    <!-- Language Toggle -->
+    <div class="language-control">
+        <button id="languageToggle" class="language-btn">
+            <span class="language-icon">🌍</span>
+            <span class="language-text">हिंग्लिश</span>
+        </button>
+    </div>
+
+    <!-- Main Story Container -->
+    <div class="story-container">
+        
+        <!-- Story Screen 1: Title -->
+        <div class="story-screen active" id="screen-1">
+            <div class="title-section">
+                <h1 class="main-title">
+                    <span class="title-word" data-en="A" data-hi="Ek">A</span>
+                    <span class="title-word" data-en="Love" data-hi="Pyaar">Love</span>
+                    <span class="title-word" data-en="Story" data-hi="Ki Kahani">Story</span>
+                    <span class="title-heart">💕</span>
+                </h1>
+                <p class="subtitle" data-en="Just for you..." data-hi="Sirf tumhare liye...">Just for you...</p>
+                <div class="blush-emoji">😊</div>
+            </div>
+            <button class="story-btn" onclick="nextScreen(2)">
+                <span data-en="Begin Our Story" data-hi="Humari Story Shuru Karte Hai">Begin Our Story</span>
+                <span class="btn-heart">💖</span>
+            </button>
+        </div>
+
+        <!-- Story Screen 2: Chapter 1 -->
+        <div class="story-screen" id="screen-2">
+            <div class="story-content">
+                <div class="chapter-number" data-en="Chapter 1" data-hi="Pehla Chapter">Chapter 1</div>
+                <div class="story-text">
+                    <p class="story-line" data-en="It started as a smile..." data-hi="Sab kuch ek smile se shuru hua...">It started as a smile...</p>
+                    <p class="story-line delay-1" data-en="A simple, sweet smile that made my heart skip" data-hi="Ek simple si, cute si smile jisne mera heart skip kar diya">A simple, sweet smile that made my heart skip</p>
+                    <p class="story-line delay-2" data-en="And suddenly, everything felt brighter ✨" data-hi="Aur achanak se, sab kuch bright lag raha tha ✨">And suddenly, everything felt brighter ✨</p>
+                </div>
+                <div class="story-visual">
+                    <div class="animated-smile">😊</div>
+                </div>
+            </div>
+            <button class="story-btn" onclick="nextScreen(3)">
+                <span data-en="Continue..." data-hi="Aage badhte hai...">Continue...</span>
+                <span class="btn-sparkle">✨</span>
+            </button>
+        </div>
+
+        <!-- Story Screen 3: Chapter 2 -->
+        <div class="story-screen" id="screen-3">
+            <div class="story-content">
+                <div class="chapter-number" data-en="Chapter 2" data-hi="Dusra Chapter">Chapter 2</div>
+                <div class="story-text">
+                    <p class="story-line" data-en="Then came the butterflies..." data-hi="Phir aaye butterflies...">Then came the butterflies...</p>
+                    <p class="story-line delay-1" data-en="Every time I thought of you" data-hi="Jab bhi main tumhare baare mein sochta tha">Every time I thought of you</p>
+                    <p class="story-line delay-2" data-en="My heart would flutter like crazy 🦋" data-hi="Mera heart pagal ki tarah flutter karta tha 🦋">My heart would flutter like crazy 🦋</p>
+                </div>
+                <div class="story-visual">
+                    <div class="animated-butterfly">🦋</div>
+                    <div class="animated-butterfly delay-1">🦋</div>
+                    <div class="animated-butterfly delay-2">🦋</div>
+                </div>
+            </div>
+            <button class="story-btn" onclick="nextScreen(4)">
+                <span data-en="What happened next?" data-hi="Phir kya hua?">What happened next?</span>
+                <span class="btn-heart">💕</span>
+            </button>
+        </div>
+
+        <!-- Story Screen 4: Chapter 3 -->
+        <div class="story-screen" id="screen-4">
+            <div class="story-content">
+                <div class="chapter-number" data-en="Chapter 3" data-hi="Teesra Chapter">Chapter 3</div>
+                <div class="story-text">
+                    <p class="story-line" data-en="And now, I'm blushing just writing this..." data-hi="Aur ab, yeh likhte time mere cheeks red ho rahi hai...">And now, I'm blushing just writing this...</p>
+                    <p class="story-line delay-1" data-en="Because what I feel for you" data-hi="Kyunki jo main tumhare liye feel karta hun">Because what I feel for you</p>
+                    <p class="story-line delay-2" data-en="Is something truly magical 💫" data-hi="Woh kuch truly magical hai 💫">Is something truly magical 💫</p>
+                </div>
+                <div class="story-visual">
+                    <div class="animated-blush">😳</div>
+                    <div class="sparkles">
+                        <span class="sparkle">✨</span>
+                        <span class="sparkle">💫</span>
+                        <span class="sparkle">⭐</span>
+                    </div>
+                </div>
+            </div>
+            <button class="story-btn" onclick="nextScreen(5)">
+                <span data-en="Tell me more..." data-hi="Aur batao...">Tell me more...</span>
+                <span class="btn-sparkle">💫</span>
+            </button>
+        </div>
+
+        <!-- Story Screen 5: Interactive Choices -->
+        <div class="story-screen" id="screen-5">
+            <div class="story-content">
+                <div class="story-text">
+                    <p class="story-line" data-en="I've been thinking about you..." data-hi="Main tumhare baare mein soch rahi tha...">I've been thinking about you...</p>
+                    <p class="story-line delay-1" data-en="And I wonder if you feel the same way?" data-hi="Aur main wonder kar raha hun ki kya tum bhi same feel karte ho?">And I wonder if you feel the same way?</p>
+                </div>
+                <div class="choice-section">
+                    <h3 class="choice-title" data-en="Choose what's in your heart:" data-hi="Apne dil ki baat choose karo:">Choose what's in your heart:</h3>
+                    <div class="choices">
+                        <button class="choice-btn" onclick="showResponse('miss')">
+                            <span data-en="I miss you" data-hi="Main tumhe miss karti hun">I miss you</span>
+                            <span class="choice-emoji">💭</span>
+                        </button>
+                        <button class="choice-btn" onclick="showResponse('favorite')">
+                            <span data-en="You're my favorite" data-hi="Tum mere favorite ho">You're my favorite</span>
+                            <span class="choice-emoji">⭐</span>
+                        </button>
+                        <button class="choice-btn" onclick="showResponse('blush')">
+                            <span data-en="You make me blush" data-hi="Tum mujhe blush karate ho">You make me blush</span>
+                            <span class="choice-emoji">😊</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Response Screen -->
+        <div class="story-screen" id="response-screen">
+            <div class="story-content">
+                <div class="response-content">
+                    <div class="response-emoji"></div>
+                    <div class="response-text"></div>
+                    <div class="response-animation">
+                        <div class="heart-burst">
+                            <span class="burst-heart">💕</span>
+                            <span class="burst-heart">💖</span>
+                            <span class="burst-heart">💗</span>
+                            <span class="burst-heart">💓</span>
+                            <span class="burst-heart">💕</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="story-btn" onclick="nextScreen(6)">
+                <span data-en="Continue to the end..." data-hi="End tak chalte hai...">Continue to the end...</span>
+                <span class="btn-heart">💖</span>
+            </button>
+        </div>
+
+        <!-- Final Screen: Confession -->
+        <div class="story-screen" id="screen-6">
+            <div class="story-content final-content">
+                <div class="confession-text">
+                    <p class="confession-line" data-en="I poured my heart into this little world," data-hi="Maine apna poora dil is choti si duniya mein daal diya,">I poured my heart into this little world,</p>
+                    <p class="confession-line delay-1" data-en="just for you." data-hi="sirf tumhare liye.">just for you.</p>
+                    <p class="confession-line delay-2" data-en="I hope you felt every pixel of my love 💕" data-hi="Mujhe umeed hai tumne mere pyaar ka har pixel feel kiya 💕">I hope you felt every pixel of my love 💕</p>
+                    <div class="big-question">
+                        <p class="question-text" data-en="Would you be mine?" data-hi="Kya tum mere ho sakte ho?">Would you be mine?</p>
+                        <div class="question-heart">💖</div>
+                    </div>
+                </div>
+                <div class="final-choices">
+                    <button class="final-btn yes-btn" onclick="showEnding('yes')">
+                        <span data-en="Yes" data-hi="Haan">Yes</span>
+                        <span class="final-emoji">💕</span>
+                    </button>
+                    <button class="final-btn course-btn" onclick="showEnding('course')">
+                        <span data-en="Of course 😘" data-hi="Bilkul 😘">Of course 😘</span>
+                        <span class="final-emoji">💖</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ending Screen -->
+        <div class="story-screen" id="ending-screen">
+            <div class="story-content ending-content">
+                <div class="ending-animation">
+                    <div class="big-heart-final">💖</div>
+                    <div class="celebration-hearts">
+                        <span class="celebration-heart">💕</span>
+                        <span class="celebration-heart">💖</span>
+                        <span class="celebration-heart">💗</span>
+                        <span class="celebration-heart">💓</span>
+                        <span class="celebration-heart">💕</span>
+                        <span class="celebration-heart">💖</span>
+                    </div>
+                </div>
+                <div class="ending-text">
+                    <p class="ending-line" data-en="You've made me the happiest person alive! 🥰" data-hi="Tumne mujhe sabse khush insaan bana diya! 🥰">You've made me the happiest person alive! 🥰</p>
+                    <p class="ending-line delay-1" data-en="This is just the beginning of our beautiful story..." data-hi="Yeh sirf humari beautiful story ki shururat hai...">This is just the beginning of our beautiful story...</p>
+                    <p class="ending-line delay-2" data-en="Forever yours 💕" data-hi="Hamesha tumhara 💕">Forever yours 💕</p>
+                </div>
+                <button class="story-btn restart-btn" onclick="restartStory()">
+                    <span data-en="Experience it again" data-hi="Phir se experience karo">Experience it again</span>
+                    <span class="btn-sparkle">✨</span>
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Hidden audio element for background music -->
+    <audio id="backgroundMusic" loop>
+        <source src="data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBkOhzfLNeSsFJYLI8NyOPAoSaLfq2Z1OFBBDp+PyvmMcBjqVzfLMeisFJYLH8N+QQAoUXrXp659NEgxKodb0v2EhAzqB1PLMeiUFl+T2imIhAUyJ0PLPwgBEKjOG1fLOwiUFl+T1imIhAUyJ0PLPwQBEKjOH1fLNwgBFKgSJ0fLQgOcH2QwNjW3CtQAGCjqG1fLOwgBEKgOJ0fLPwQBEKgCH1vLOwiUFl+X1imIhAUqJ0PLPwwBDKwSJa+K=" type="audio/wav">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
